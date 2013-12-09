@@ -2,12 +2,9 @@
     "require": {
         "behat/behat": "2.4.*@stable",
         "behat/mink": "1.4@stable",
-        "behat/mink-goutte-driver": "*",
         "behat/mink-extension": "*",
-        "behat/mink-zombie-driver": "1.0",
-        "behat/mink-selenium2-driver": "*",
-        "behat/symfony2-extension": "*"
-
+        "behat/mink-zombie-driver": "1.0"
+ 
     },
     "minimum-stability": "dev",
     "config": {
