@@ -37,4 +37,8 @@ before_script:
 
 
 script:
+    - find . -name node_modules
+    - find $CWD -name node_modules
+    - find /usr -name node_modules
+    - find /opt -name node_modules
     - env NODE_PATH="/usr/lib/node_modules" ./bin/behat
