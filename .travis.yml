@@ -22,7 +22,7 @@ before_script:
 
 # from http://shashikantjagtap.net/using-zombie-js-driver-with-behats-minkextension/
     - sudo apt-get install python-software-properties
-    - sudo add-apt-repository ppa:chris-lea/node.js
+    - yes | sudo add-apt-repository ppa:chris-lea/node.js
     - sudo apt-get update
     - sudo apt-get install nodejs nodejs-dev npm
 
@@ -37,4 +37,4 @@ before_script:
 
 
 script:
-    - ./bin/behat
+    - env NODE_PATH="/usr/lib/node_modules" ./bin/behat
