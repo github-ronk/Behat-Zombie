@@ -19,6 +19,13 @@ before_script:
     - sudo service apache2 restart
 # end part from http://about.travis-ci.org/docs/user/languages/php/
 
+
+# from http://shashikantjagtap.net/using-zombie-js-driver-with-behats-minkextension/
+    - sudo apt-get install python-software-properties
+    - sudo add-apt-repository ppa:chris-lea/node.js
+    - sudo apt-get update
+    - sudo apt-get install nodejs nodejs-dev npm
+
     - composer self-update
     - composer install --no-interaction --prefer-dist
     #- sh -e /etc/init.d/xvfb start
@@ -26,5 +33,8 @@ before_script:
     #- wget http://selenium.googlecode.com/files/selenium-server-standalone-2.31.0.jar
     #- java -jar selenium-server-standalone-2.31.0.jar > /dev/null &
     - sleep 5
+
+
+
 script:
     - ./bin/behat
